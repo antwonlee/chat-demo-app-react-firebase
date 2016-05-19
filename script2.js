@@ -1,3 +1,3 @@
 var message = require('./script1');
 
-document.write(message);
+document.write(`This is ES6 syntax ${message}`);

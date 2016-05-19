@@ -54,16 +54,13 @@
 
 	module.exports = 'hi there from module 1';
 
-
-
 /***/ },
 /* 2 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var message = __webpack_require__(1);
 
-	document.write(message);
-
+	document.write(`This is ES6 syntax ${ message }`);
 
 /***/ }
 /******/ ]);
