@@ -2,6 +2,7 @@ import React from 'react';
 import MessageList from './MessageList.jsx';
 import ChannelList from './ChannelList.jsx';
 import MessageBox from './MessageBox.jsx';
+import Login from './Login.jsx';
 import mui from 'material-ui';
 import connectToStore from 'alt/utils/connectToStores';
 import ChatStore from '../stores/ChatStore';
@@ -25,6 +26,10 @@ class App extends React.Component {
 
   static getStores() {
     return [ChatStore];
+  }
+
+  static getPropsFromStores() {
+    return ChatStore.getState();
   }
 
   static childContextTypes = {
