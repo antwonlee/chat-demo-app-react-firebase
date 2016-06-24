@@ -14,4 +14,4 @@ class ChatStore {
   }
 }
 
-export default alt.crateStore(ChatStore);
+export default alt.createStore(ChatStore);
