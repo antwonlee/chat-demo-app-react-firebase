@@ -3,11 +3,14 @@ import MessageList from './MessageList.jsx';
 import ChannelList from './ChannelList.jsx';
 import MessageBox from './MessageBox.jsx';
 import mui from 'material-ui';
+import connectToStore from 'alt/utils/connectToStores';
+import ChatStore from '../stores/ChatStore';
 
 var ThemeManager = new mui.Styles.ThemeManager();
 var Colors = mui.Styles.Colors;
 var AppBar = mui.AppBar;
 
+@connectToStores
 class App extends React.Component {
   constructor(){
     super();
@@ -18,6 +21,10 @@ class App extends React.Component {
       primary3Color: Colors.blue100,
       accent1Color: Colors.pink400
     });
+  }
+
+  static getStores() {
+    return [ChatStore];
   }
 
   static childContextTypes = {
